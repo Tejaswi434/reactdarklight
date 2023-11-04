@@ -1,36 +1,27 @@
 import {Component} from 'react'
+import './index.css'
 
 class LightDarkMode extends Component {
-state={back:true}
+  state = {color: true}
 
-dark=()=>{
-    this.setState({back:false})
-}
-light=()=>{
-    this.setState({back:true})
-}
-  
+  change = () => {
+    const {color} = this.state
+    this.setState({color: !color})
+  }
+
   render() {
-      
-      const{back}=this.state
-
-      return(
-          
-        if(back){
-     <div className="dark">
-         <h1>Click to Change Mode</h1>
-         <button onClick={this.dark}>Light Mode</button>
-     </div>
-      }
-      else{
-          <div className="light">
-         <h1>Click to Change Mode</h1>
-         <button onClick={this.light}>Dark Mode</button>
-     </div>
-      }
-      )
-    }
+    const {color} = this.state
+    const modetext = color ? 'LightMode' : 'DarkMode'
+    const mode = color ? 'dark' : 'light'
+    return (
+      <div className={`${mode} main`}>
+        <h1>Click to Change Mode</h1>
+        <button onClick={this.change} type="button">
+          {modetext}
+        </button>
+      </div>
+    )
+  }
 }
 
 export default LightDarkMode
-        
