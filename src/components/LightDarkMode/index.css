@@ -1,6 +1,15 @@
-.light {
-  background-color: white;
-}
 .dark {
   background-color: black;
+  color: white;
+}
+.light {
+  background-color: white;
+  color: black;
+}
+.but-style {
+  padding: 20px;
+  border-radius: 20px;
+}
+.main {
+  text-align: center;
 }
