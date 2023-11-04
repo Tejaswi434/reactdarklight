@@ -17,14 +17,14 @@ class LightDarkMode extends Component{
          
             return(
            {mode ?
-          <div className="darkcontainer">
+          (<div className="darkcontainer">
         <h1>Click to change the mode</h1>
                 <button className="but" onClick={this.light}>Light Mode</button>
-                 </div> : 
-                 <div classsName="lightcontainer">
+                 </div>) : 
+                ( <div classsName="lightcontainer">
                  <h1>Click to change the mode</h1>
                 <button className="but" onClick={this.dark}>Dark Mode</button>
-                 </div>
+                 </div>)
                  }
            
         )
