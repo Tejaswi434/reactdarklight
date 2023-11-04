@@ -4,17 +4,18 @@ import "./index.css"
 
 class LightDarkMode extends Component{
     state={mode:true}
-
-    render(){
-        const{mode}=this.state
+    const{mode}=this.state
         light=()=>{
-            const {mode}=this.state
+        
             this.setState({mode:false})
         }
         dark=()=>{
-             const {mode}=this.state
+        
             this.setState({mode:true})}
          
+
+    render(){
+        
             return(
            {mode ?
           (<div className="darkcontainer">
