@@ -23,7 +23,7 @@ light=()=>{
      </div>
       }
       else{
-          <div className="dark">
+          <div className="light">
          <h1>Click to Change Mode</h1>
          <button onClick={this.light}>Dark Mode</button>
      </div>
