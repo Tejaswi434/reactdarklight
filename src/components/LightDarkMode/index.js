@@ -1,36 +1,36 @@
-// Write your code here
-import {Component} from "react"
-import "./index.css"
+import {Component} from 'react'
 
-class LightDarkMode extends Component{
-    state={mode:true}
-    const{mode}=this.state
-        light=()=>{
-        
-            this.setState({mode:false})
-        }
-        dark=()=>{
-        
-            this.setState({mode:true})}
-         
+class LightDarkMode extends Component {
+state={back:true}
 
-    render(){
-        
-            return(
-           {mode ?
-          (<div className="darkcontainer">
-        <h1>Click to change the mode</h1>
-                <button className="but" onClick={this.light}>Light Mode</button>
-                 </div>) : 
-                ( <div classsName="lightcontainer">
-                 <h1>Click to change the mode</h1>
-                <button className="but" onClick={this.dark}>Dark Mode</button>
-                 </div>)
-                 }
-           
-        )
+dark=()=>{
+    this.setState({back:false})
+}
+light=()=>{
+    this.setState({back:true})
+}
+  
+  render() {
+      
+      const{back}=this.state
+
+      return(
+          
+        if(back){
+     <div className="dark">
+         <h1>Click to Change Mode</h1>
+         <button onClick={this.dark}>Light Mode</button>
+     </div>
+      }
+      else{
+          <div className="dark">
+         <h1>Click to Change Mode</h1>
+         <button onClick={this.light}>Dark Mode</button>
+     </div>
+      }
+      )
     }
-
 }
 
-export LightDarkMode default 
+export default LightDarkMode
+        
