@@ -1,10 +1,6 @@
-/* Write your CSS here */
-.darkcontainer {
-  background-color: #000000;
+.light {
+  background-color: white;
 }
-.lightcontainer {
-  background-color: #ffffff;
-}
-.but {
-  background-color: #ffffff;
+.dark {
+  background-color: black;
 }
